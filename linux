@@ -2,3 +2,9 @@ sudo apt install ./chrome-remote-desktop_current_amd.deb
 
 #how to get write access of folder ('/usr' or '/etc') :
 sudo chown -R 'manibhushan' /usr/local
+
+#used to delete mongo "unable to delete file"
+ls | grep ^mongo
+sudo chown -R 'pratyush' /var/lib
+chmod 777 mongodb-org.list
+rm mongodb-org.list
