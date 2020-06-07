@@ -1,10 +1,16 @@
 sudo apt install ./chrome-remote-desktop_current_amd.deb
 
-#how to get write access of folder ('/usr' or '/etc') :
+# how to get write access of folder ('/usr' or '/etc') :
 sudo chown -R 'manibhushan' /usr/local
 
-#used to delete mongo "unable to delete file"
+# used to delete mongo "unable to delete file"
 ls | grep ^mongo
 sudo chown -R 'pratyush' /var/lib
 chmod 777 mongodb-org.list
 rm mongodb-org.list
+
+# set java home with nano text editor
+sudo nano /etc/environment
+then append below PATH="..."
+JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+then ctrl+O >> enter >> ctrl+X
