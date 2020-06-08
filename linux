@@ -14,3 +14,7 @@ sudo nano /etc/environment
 then append below PATH="..."
 JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 then ctrl+O >> enter >> ctrl+X
+
+# check system info : hardware + OS
+sudo lshw -html > system_info.html
+firefox system_info.html
