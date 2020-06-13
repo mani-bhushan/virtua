@@ -1,4 +1,10 @@
-sudo apt install ./chrome-remote-desktop_current_amd.deb
+# If you want to use the apt command for deb files, use it like this:
+sudo apt install path_to_deb_file
+>> sudo apt install ./chrome-remote-desktop_current_amd.deb
+
+# If you want to use the dpkg command for installing deb packages, here’s how to do it:
+sudo dpkg -i path_to_deb_file
+>> sudo dpkg -i ./chrome-remote-desktop_current_amd.deb
 
 # how to get write access of folder ('/usr' or '/etc') :
 sudo chown -R 'manibhushan' /usr/local
