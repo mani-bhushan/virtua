@@ -7,7 +7,7 @@ sudo dpkg -i path_to_deb_file
 >> sudo dpkg -i ./chrome-remote-desktop_current_amd.deb
 
 # how to get write access of folder ('/usr' or '/etc') :
-sudo chown -R 'manibhushan' /usr/local
+>> sudo chown -R 'manibhushan' /usr/local
 
 # used to delete mongo "unable to delete file"
 ls | grep ^mongo
@@ -27,7 +27,7 @@ firefox system_info.html
 
 # Printer solutions
 
-sudo apt-get install lsb
+>> sudo apt-get install lsb
 
  If error : The following packages have unmet dependencies:
             anydesk : Depends: libgtkglext1 but it is not going to be installed
@@ -36,3 +36,22 @@ sudo apt-get install lsb
                   Depends: libjpeg62 but it is not going to be installed
 
  USE : sudo apt --fix-broken install
+
+# Uninstall driver or remove driver :
+>> sudo apt remove ./epson-inkjet-printer-201401w_1.0.0-1lsb3.2_amd64.deb
+
+# List or display loaded modules
+>> less /proc/modules
+
+# To find out if a particular module/driver installed or not :
+>> find /lib/modules/$(uname -r)/kernel/drivers/ -iname "driver-to-search-here"
+
+# To find out if a driver called foo.ko installed or not, run:
+>> find /lib/modules/$(uname -r)/kernel/drivers/ -iname "foo.ko"
+
+# Find if e1000e driver installed or not:
+>> find /lib/modules/$(uname -r)/kernel/drivers/ -iname "*e1000e*.ko"
+>> find /lib/modules/$(uname -r)/kernel/drivers/ -iname "e1000e.ko"
+
+Run modinfo on driver name:
+>> modinfo e1000e
