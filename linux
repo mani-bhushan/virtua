@@ -25,7 +25,8 @@ then ctrl+O >> enter >> ctrl+X
 sudo lshw -html > system_info.html
 firefox system_info.html
 
-# Printer solutions
+# Printer solutions : Epson L130
+  URL to download : https://download3.ebz.epson.net/dsc/f/03/00/03/45/41/58b06443ec2b00696f49aaef0ee0e3ea3c1354d2/epson-inkjet-printer-201401w_1.0.0-1lsb3.2_amd64.deb
 
 >> sudo apt-get install lsb
 
