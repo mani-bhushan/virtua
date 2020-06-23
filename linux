@@ -24,3 +24,15 @@ then ctrl+O >> enter >> ctrl+X
 # check system info : hardware + OS
 sudo lshw -html > system_info.html
 firefox system_info.html
+
+# Printer solutions
+
+sudo apt-get install lsb
+
+ If error : The following packages have unmet dependencies:
+            anydesk : Depends: libgtkglext1 but it is not going to be installed
+            lsb : Depends: lsb-core (>= 11.1.0ubuntu2) but it is not going to be installed
+                  Depends: lsb-printing (>= 11.1.0ubuntu2) but it is not going to be installed
+                  Depends: libjpeg62 but it is not going to be installed
+
+ USE : sudo apt --fix-broken install
