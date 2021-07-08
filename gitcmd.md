@@ -13,3 +13,10 @@ Step 1: From your project repository, check out a new branch and test the change
 >> git merge --no-ff pratyush463-patch-1
 
 >> git push origin master
+
+# SSH Key generate from git-bash and import into github ssh-key settings
+>> ssh-keygen -t rsa -b 4096 -C "bhushan.mani.mishra@gmail.com"
+> passphrase = mani-bhushan-repositories
+> eval $(ssh-agent -s)
+> ssh-add ~/.ssh/id_rsa
+> clip < ~/.ssh/id_rsa.pub
